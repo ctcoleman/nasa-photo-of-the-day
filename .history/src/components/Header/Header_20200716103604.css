@@ -1,0 +1,24 @@
+/*
+=== Styling for the Header component with the nav and logo ===
+*/
+
+.Header {
+  background-color: rgba(100, 98, 98, 0.719);
+  border-bottom: 1px solid rgba(0,0, 0, 0.0975);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: height 0.2s ease-in-out;
+  height: 77px;
+  display: flex;
+  flex-direction: row;
+  height: 77px;
+  margin: 0 auto;
+  padding: 26px 40px;
+}
+
+.Header-logo {
+  display: block;
+  height: 35px;
+  width: 176px;
+}

@@ -1,0 +1,40 @@
+/*
+=== Styling for the Post component ===
+*/
+
+.Post {
+  border-radius: 3px;
+  border: 1px solid #e6e5e6;
+  background-color: #fff;
+  margin-bottom: 60px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.Poster-name {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+}
+.Post-image-bg {
+  background-color: #efefef;
+}
+.Post-image img {
+  display: block;
+  width: 100%;
+}
+.Post-caption {
+  padding: 16px 16px;
+}
+.Post-caption strong {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 100px;
+}
+.Post-caption p {
+  background: grey;
+  text-align: center;
+  padding: 10px;
+}
