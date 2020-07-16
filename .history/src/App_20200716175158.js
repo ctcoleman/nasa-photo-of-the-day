@@ -62,14 +62,6 @@ function App() {
         <Post url={url} date={randomDate()} />
         <Post url={url} date={randomDate()} />
         <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
         {/* <button onClick={() => createPost({url})}>Add Post</button> */}
       </section>
     </div>

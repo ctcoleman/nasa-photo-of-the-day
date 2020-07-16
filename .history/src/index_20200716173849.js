@@ -3,5 +3,5 @@ import { render } from 'react-dom'; // import Reacts render method to render our
 import App from './App'; // import our React App to be rendered to the DOM
 
 
-// Use Reacts render method to render the React App to the DOM element with the id of root
+// Use Reacts render method to render the React App to the DOM element 
 render(<App />, document.getElementById('root'));

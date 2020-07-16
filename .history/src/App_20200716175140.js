@@ -32,7 +32,6 @@ function App() {
   // define the url we will use in the axios call with the imported constants
   const url = `${BASE_URL}?api_key=${API_KEY}`
 
-  // randomDate function to make sure each post is always different
   function randomDate() {
     function randomNumber(min, max) {
       return Math.random() * (max - min) + min
@@ -59,14 +58,6 @@ function App() {
       <GlobalStyle />
       <Header title='NASA Fact Cards' description='NASA Astronomy Pictures of the Day' />
       <section className="App-main">
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
         <Post url={url} date={randomDate()} />
         <Post url={url} date={randomDate()} />
         <Post url={url} date={randomDate()} />
