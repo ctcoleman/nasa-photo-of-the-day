@@ -1,5 +1,6 @@
 import React, { useState } from 'react' // anywhere we use React we import React
 import axios from 'axios'
+import { BASE_URL, API_KEY } from './constants'
 import './Post.css' // add styling
 
 // Create Post component
@@ -30,7 +31,7 @@ function Post({ url }) {
       </header>
       <div className='Post-image'>
         <div className='Post-image-bg'>
-          <img alt={caption} src={pictureUrl} />
+          <img alt={caption} src={pictureU} />
         </div>
       </div>
       <div className='Post-caption'>

@@ -24,13 +24,13 @@ function Post({ url }) {
       <header>
         <div className='Post-user'>
           <div className='Post-user-nickname'>
-            <span>{name}</span>
+            <span>{nickname}</span>
           </div>
         </div>
       </header>
       <div className='Post-image'>
         <div className='Post-image-bg'>
-          <img alt={caption} src={pictureUrl} />
+          <img alt={caption} src={image} />
         </div>
       </div>
       <div className='Post-caption'>

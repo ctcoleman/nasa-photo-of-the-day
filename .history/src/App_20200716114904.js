@@ -2,7 +2,7 @@ import React, { useState } from 'react'; // anywhere we use React we import Reac
 import axios from 'axios'
 import './App.css'; // import the app styling
 import Header from './components/Header' // import the Header component
-import CreatePost from './components/CreatePost' // import the Post component
+import CreatePost from './components/Post' // import the Post component
 import { BASE_URL, API_KEY } from './constants'
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   
   axios.get(`${BASE_URL}?api_key=${API_KEY}`)
     .then(res => {
-      setUrl(res)
+      setUrl(res.c)
     })
     .catch(err => console.log(err))
 

@@ -1,9 +1,11 @@
 import React from 'react'
 import axios from 'axios'
 import Post from '../Post'
+import { BASE_URL, API_KEY } from './constants'
 import './CreatePost.css'
 
 function CreatePost({ url }) {
+  const [url, setUrl] = useState({url})
 
   function randomNumber(min, max){
     return Math.random() * (max - min) + min
@@ -20,15 +22,12 @@ function CreatePost({ url }) {
       <button 
         className='random-post-button'
         onClick={() => {
-          return(
+          setUrl(`${url}&date=${randomDate()}`)
           <Post url={url}/>
-          )  
-        }
+          }
         }>
           Add a post
         </button>
     </div>
   )
 }
-
-export default CreatePost

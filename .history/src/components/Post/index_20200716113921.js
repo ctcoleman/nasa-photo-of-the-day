@@ -1,5 +1,4 @@
-import React, { useState } from 'react' // anywhere we use React we import React
-import axios from 'axios'
+import React from 'react' // anywhere we use React we import React
 import './Post.css' // add styling
 
 // Create Post component
@@ -9,7 +8,8 @@ function Post({ url }) {
   const [caption, setCaption] = useState([])
   const [name, setName] = useState([])
   const [pictureName, setPictureName] = useState([])
-
+  
+  console.log(url)
   axios.get({url})
     .then(res => {
       setPictureUrl(res.data.url)
@@ -24,13 +24,13 @@ function Post({ url }) {
       <header>
         <div className='Post-user'>
           <div className='Post-user-nickname'>
-            <span>{name}</span>
+            <span>{nickname}</span>
           </div>
         </div>
       </header>
       <div className='Post-image'>
         <div className='Post-image-bg'>
-          <img alt={caption} src={pictureUrl} />
+          <img alt={caption} src={image} />
         </div>
       </div>
       <div className='Post-caption'>

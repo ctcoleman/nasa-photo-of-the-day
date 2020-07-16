@@ -31,4 +31,4 @@ function CreatePost({ url }) {
   )
 }
 
-export default CreatePost
+export default Create

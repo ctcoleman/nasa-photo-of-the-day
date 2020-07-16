@@ -4,6 +4,7 @@ import Post from '../Post'
 import './CreatePost.css'
 
 function CreatePost({ url }) {
+  const [url, setUrl] = useState({url})
 
   function randomNumber(min, max){
     return Math.random() * (max - min) + min
@@ -30,5 +31,3 @@ function CreatePost({ url }) {
     </div>
   )
 }
-
-export default CreatePost

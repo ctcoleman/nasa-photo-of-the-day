@@ -30,5 +30,3 @@ function CreatePost({ url }) {
     </div>
   )
 }
-
-export default CreatePost

@@ -1,5 +1,6 @@
 import React, { useState } from 'react' // anywhere we use React we import React
 import axios from 'axios'
+import { BASE_URL, API_KEY } from './constants'
 import './Post.css' // add styling
 
 // Create Post component
