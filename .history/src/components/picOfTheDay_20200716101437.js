@@ -1,5 +1,9 @@
 import React from 'react'
 
+function CreateRandomDate() {
+  return
+}
+
 function PicOfTheDay( { url } ) {
   
   return (

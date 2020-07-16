@@ -1,5 +1,11 @@
 import React from 'react'
 
+let year, day, month
+
+function CreateRandomDate() {
+  return
+}
+
 function PicOfTheDay( { url } ) {
   
   return (

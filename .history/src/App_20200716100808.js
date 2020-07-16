@@ -7,21 +7,20 @@ import { BASE_URL, API_KEY } from './constants'
 
 function App() {
 
-  const [url, setUrl] = useState(null)
+  const [url, setUrl] = useState([])
   const [pictureUrl, setPictureUrl] = useState([])
   const [caption, setCaption] = useState([])
   const [name, setName] = useState([])
   const [pictureName, setPictureName] = useState([])
-  console.log(url)
 
-  if (url === null){
+
+  if (url === []){
     axios.get(`${BASE_URL}?api_key=${API_KEY}`)
       .then(res => {
         setPictureUrl(res.data.url)
         setCaption(res.data.explanation)
         setName(res.data.copyright)
         setPictureName(res.data.title)
-        setUrl(res.config.url)
       })
       .catch(err => console.log(err))
   }
@@ -29,7 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header title='NASAGram' description='NASA Picture of the Day' />
+      <Header />
       <section className="App-main">
         <Post nickname={name} pictureName={pictureName} avatar='./avatar.jpg' caption={caption} image={pictureUrl} />
       </section>

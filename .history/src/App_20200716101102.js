@@ -21,7 +21,7 @@ function App() {
         setCaption(res.data.explanation)
         setName(res.data.copyright)
         setPictureName(res.data.title)
-        setUrl(res.config.url)
+        setUrl()
       })
       .catch(err => console.log(err))
   }
@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header title='NASAGram' description='NASA Picture of the Day' />
+      <Header />
       <section className="App-main">
         <Post nickname={name} pictureName={pictureName} avatar='./avatar.jpg' caption={caption} image={pictureUrl} />
       </section>

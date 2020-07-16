@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header title='NASAGram' description='NASA Picture of the Day' />
+      <Header title='NASAGram' description='NASA />
       <section className="App-main">
         <Post nickname={name} pictureName={pictureName} avatar='./avatar.jpg' caption={caption} image={pictureUrl} />
       </section>
