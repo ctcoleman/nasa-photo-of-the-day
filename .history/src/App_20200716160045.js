@@ -9,11 +9,11 @@ import './App.css'; // import the app styling
 function App() {
   const url = `${BASE_URL}?api_key=${API_KEY}`
 
-  // function createPost(url) {
-  //   return(
-  //     <CreatePost url={url} />
-  //   )
-  // }
+  function createPost(url) {
+    return(
+      <CreatePost url={url} />
+    )
+  }
   return (
     <div className="App">
       <Header title='NASA Fact Cards' description='NASA Astronomy Pictures of the Day' />

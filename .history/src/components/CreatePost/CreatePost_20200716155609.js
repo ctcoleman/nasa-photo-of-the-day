@@ -1,7 +1,7 @@
 import React from 'react'
 import Post from '../Post/Post'
 import './CreatePost.css'
-// import {dates} from '../../constants/constants'
+import {dates} from '../../constants/constants'
 
 function CreatePost({ url }) {
 
@@ -25,7 +25,7 @@ function CreatePost({ url }) {
           <Post date={e} url={url}/>
         )})
       } */}
-      <Post url={url} date={randomDate()} />
+      <Post url={url} date={randomDate()}
     </div>
   )  
 }

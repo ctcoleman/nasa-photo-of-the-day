@@ -8,20 +8,24 @@ import './App.css'; // import the app styling
 
 function App() {
   const url = `${BASE_URL}?api_key=${API_KEY}`
+  
+  function randomDate() {
+    function randomNumber(min, max) {
+      return Math.random() * (max - min) + min
+    }
 
-  // function createPost(url) {
-  //   return(
-  //     <CreatePost url={url} />
-  //   )
-  // }
+    let year = Math.floor(randomNumber(1996, 2019))
+    let month = Math.floor(randomNumber(1, 12))
+    let day = Math.floor(randomNumber(1, 28))
+    let date = `${year}-${month}-${day}`
+    return date
+  }
+
   return (
     <div className="App">
       <Header title='NASA Fact Cards' description='NASA Astronomy Pictures of the Day' />
       <section className="App-main">
         <CreatePost url={url} />
-        <CreatePost url={url} />
-        <CreatePost url={url} />
-        {/* <button onClick={() => createPost({url})}>Add Post</button> */}
       </section>
     </div>
   );
