@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react' // anywhere we use React we import React
-import {Article, Header, Caption, CaptionParagraph, CaptionStrong, Image} from './PostStyle'
+import {Article} from './PostStyle'
 import axios from 'axios'
+import './Post.css' // add styling
 
 // Create Post component
 function Post({ url, date }) {
@@ -8,7 +9,16 @@ function Post({ url, date }) {
   const [caption, setCaption] = useState([])
   const [name, setName] = useState([])
   const [pictureName, setPictureName] = useState([])
-  
+
+  const Article = styled.article `
+    border-radius: 30px;
+    border: 1px solid #e6e5e6;
+    background-color: #fff;
+    box-shadow: 5px 10px #3d3d3d;
+    margin-bottom: 60px;
+    margin-left: 20%;
+    margin-right: 20%;
+  `
   useEffect(() => {
     axios.get(`${url}&date=${date}`)
     .then(res => {
@@ -22,16 +32,22 @@ function Post({ url, date }) {
     
   return (
     <Article className='Post'>
-      <Header>
-        <span>{name}</span>
-      </Header>
+      <header>
+        <div className='Poster'>
+          <div className='Poster-name'>
+            <span>{name}</span>
+          </div>
+        </div>
+      </header>
       <div className='Post-image'>
-        <Image alt={caption} src={pictureUrl} />
+        <div className='Post-image-bg'>
+          <img alt={caption} src={pictureUrl} />
+        </div>
       </div>
-      <Caption className='Post-caption'>
-        <CaptionStrong>{pictureName}</CaptionStrong>
-        <CaptionParagraph>{caption}</CaptionParagraph>
-      </Caption>
+      <div className='Post-caption'>
+        <strong>{pictureName}</strong>
+        <p>{caption}</p>
+      </div>
     </Article>
   )
 }

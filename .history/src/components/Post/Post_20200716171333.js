@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react' // anywhere we use React we import React
 import {Article, Header, Caption, CaptionParagraph, CaptionStrong, Image} from './PostStyle'
 import axios from 'axios'
+import './Post.css' // add styling
 
 // Create Post component
 function Post({ url, date }) {
@@ -26,12 +27,12 @@ function Post({ url, date }) {
         <span>{name}</span>
       </Header>
       <div className='Post-image'>
-        <Image alt={caption} src={pictureUrl} />
+        <img alt={caption} src={pictureUrl} />
       </div>
-      <Caption className='Post-caption'>
-        <CaptionStrong>{pictureName}</CaptionStrong>
-        <CaptionParagraph>{caption}</CaptionParagraph>
-      </Caption>
+      <div className='Post-caption'>
+        <strong>{pictureName}</strong>
+        <p>{caption}</p>
+      </div>
     </Article>
   )
 }
