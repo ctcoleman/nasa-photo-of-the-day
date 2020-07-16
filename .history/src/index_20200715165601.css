@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+ background: rgb(71, 69, 69);
+ color: white;
+ -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+ font-size: ;
+ font-family: ;
+}
+
+button {
+ cursor: pointer;
+}
