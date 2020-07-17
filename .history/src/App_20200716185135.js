@@ -53,6 +53,7 @@ function App() {
       <GlobalStyle />
       <Header title='NASA Fact Cards' description='NASA Astronomy Pictures of the Day' />
       <section className="App-main">
+        <button onClick={createPost()}>Add a Post</button>
         <Post url={url} date={randomDate()} />
         <Post url={url} date={randomDate()} />
         <Post url={url} date={randomDate()} />

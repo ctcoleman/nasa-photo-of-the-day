@@ -1,4 +1,4 @@
-import React, {useState} from 'react'; // anywhere we use React we import React
+import React from 'react'; // anywhere we use React we import React
 import Header from './components/Header/Header' // import the Header component
 import Post from './components/Post/Post' // import the Post component
 import { BASE_URL, API_KEY, /*dates*/ } from './constants/constants' // import the constants we will use to form the API url, API key, and the dates array
@@ -31,6 +31,7 @@ button {
 function App() {
   // define the url we will use in the axios call with the imported constants
   const url = `${BASE_URL}?api_key=${API_KEY}`
+  const [count, setCount] 
 
   // randomDate function to make sure each post is always different
   function randomDate() {
@@ -44,6 +45,13 @@ function App() {
     let date = `${year}-${month}-${day}`
     return date
   }
+  // createPost function for button..???needed???
+  function createPost() {
+    return(
+      <Post url={url} date={randomDate()} />
+    )
+  }
+  
 
   // the return statement (changes to be made to the DOM)
   // call upon the globalstyles component the Header component (with title and description props)
@@ -53,10 +61,7 @@ function App() {
       <GlobalStyle />
       <Header title='NASA Fact Cards' description='NASA Astronomy Pictures of the Day' />
       <section className="App-main">
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
+        <button onClick={createPost()}>Add a Post</button>
         <Post url={url} date={randomDate()} />
         <Post url={url} date={randomDate()} />
       </section>

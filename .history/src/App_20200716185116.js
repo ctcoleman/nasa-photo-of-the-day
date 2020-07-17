@@ -44,6 +44,13 @@ function App() {
     let date = `${year}-${month}-${day}`
     return date
   }
+  // createPost function for button..???needed???
+  function createPost() {
+    return(
+      <Post url={url} date={randomDate()} />
+    )
+  }
+  
 
   // the return statement (changes to be made to the DOM)
   // call upon the globalstyles component the Header component (with title and description props)
@@ -53,10 +60,7 @@ function App() {
       <GlobalStyle />
       <Header title='NASA Fact Cards' description='NASA Astronomy Pictures of the Day' />
       <section className="App-main">
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
+        <button onClick={createPost()}>Add a Post</button>
         <Post url={url} date={randomDate()} />
         <Post url={url} date={randomDate()} />
       </section>

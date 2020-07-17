@@ -31,6 +31,7 @@ button {
 function App() {
   // define the url we will use in the axios call with the imported constants
   const url = `${BASE_URL}?api_key=${API_KEY}`
+  const [count, setCount] = useState(1)
 
   // randomDate function to make sure each post is always different
   function randomDate() {
@@ -44,19 +45,26 @@ function App() {
     let date = `${year}-${month}-${day}`
     return date
   }
+  // createPost function for button..???needed???
+  function createPost() {
+    return(
+      <Post url={url} date={randomDate()} />
+    )
+  }
+  
 
   // the return statement (changes to be made to the DOM)
   // call upon the globalstyles component the Header component (with title and description props)
   // call upon the Post component (with the url prop and date defined with the url variable define at the top of the app)
   return (
+    {
+      for (let i = count; i === count; i)
+    }
     <div className="App">
       <GlobalStyle />
       <Header title='NASA Fact Cards' description='NASA Astronomy Pictures of the Day' />
       <section className="App-main">
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
-        <Post url={url} date={randomDate()} />
+        <button onClick={createPost()}>Add a Post</button>
         <Post url={url} date={randomDate()} />
         <Post url={url} date={randomDate()} />
       </section>

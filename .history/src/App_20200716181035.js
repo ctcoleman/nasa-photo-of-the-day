@@ -1,4 +1,4 @@
-import React, {useState} from 'react'; // anywhere we use React we import React
+import React from 'react'; // anywhere we use React we import React
 import Header from './components/Header/Header' // import the Header component
 import Post from './components/Post/Post' // import the Post component
 import { BASE_URL, API_KEY, /*dates*/ } from './constants/constants' // import the constants we will use to form the API url, API key, and the dates array
@@ -44,6 +44,12 @@ function App() {
     let date = `${year}-${month}-${day}`
     return date
   }
+  // // createPost function for button..???needed???
+  // function createPost(url) {
+  //   return(
+  //     <Post url={url} date={randomDate()} />
+  //   )
+  // }
 
   // the return statement (changes to be made to the DOM)
   // call upon the globalstyles component the Header component (with title and description props)
@@ -59,6 +65,16 @@ function App() {
         <Post url={url} date={randomDate()} />
         <Post url={url} date={randomDate()} />
         <Post url={url} date={randomDate()} />
+        <Post url={url} date={randomDate()} />
+        <Post url={url} date={randomDate()} />
+        <Post url={url} date={randomDate()} />
+        <Post url={url} date={randomDate()} />
+        <Post url={url} date={randomDate()} />
+  <button
+    onClick={() => {
+      <Post url={url} date={randomDate()} />
+    }
+    }> Add Post</button>
       </section>
     </div>
   );
